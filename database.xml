@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ksiegarnia>
+    <ksiazki>
+        <ksiazka id="k1" typo="mk">
+            <tytul>Przygody Tomka Sawyera</tytul>
+            <cena jednostkaCeny="zł">50.99</cena>
+            <autor>Mark Twain</autor>
+            <opis>Akcja utworu toczy się w końcu XIX w. w miasteczku St. Petersburg w Ameryce nad rzeką Missisipi. Tematem powieści są przygody tytułowego bohatera – Tomka Sawyera i jego rówieśników </opis>
+            <ilosc>12</ilosc>
+        </ksiazka>
+
+        <ksiazka id="k2" typo="tw">
+            <tytul>Przygody Tomka Sawyera</tytul>
+            <cena jednostkaCeny="zł">48.99</cena>
+            <autor>Mark Twain</autor>
+            <opis>Akcja utworu toczy się w końcu XIX w. w miasteczku St. Petersburg w Ameryce nad rzeką Missisipi. Tematem powieści są przygody tytułowego bohatera – Tomka Sawyera i jego rówieśników </opis>
+            <ilosc>22</ilosc>
+        </ksiazka>
+
+        <ksiazka id="k3" typo="tw">
+            <tytul>Wyrwa</tytul>
+            <cena jednostkaCeny="zł">40.99</cena>
+            <autor>Wojciech Chmielarz</autor>
+            <opis>Kiedy Maciej Tomski dowiaduje się, że jego żona Janina zginęła w wypadku samochodowym, myśli, że wali mu się cały świat. Jak powiedzieć dwóm córeczkom, że właśnie straciły matkę? Jak powiedzieć teściom? Jak ma teraz funkcjonować, gdy dotychczasowe, spokojne życie nagle szarzeje i zmienia się w ciąg udręk?</opis>
+            <ilosc>32</ilosc>
+        </ksiazka>
+
+
+        <ksiazka id="k4" typo="mk">
+            <tytul>Przekręt</tytul>
+            <cena jednostkaCeny="zł">30.99</cena>
+            <autor>Paulina Świst</autor>
+            <opis>Przekręt" to już kolejna odsłona gorącej kryminalnej historii od tajemniczej Pauliny Świst. Zanurz się w świat, którym rządzą chciwość i pożądanie, a bohaterowie przekraczają kolejne granice. Jak daleko posuną się tym razem?</opis>
+            <ilosc>24</ilosc>
+        </ksiazka>
+
+    </ksiazki>
+    
+    <typyOkladek>
+        <typOkladki typo="tw">
+            <skrot>tw</skrot>
+            <nazwaTypu>twarda</nazwaTypu>
+        </typOkladki>
+        <typksiazkaa typo="mk">
+            <skrot>mk</skrot>
+            <nazwaTypu>miekka</nazwaTypu>
+        </typksiazkaa>
+    </typyOkladek>
+
+    <klienci>
+        <klient idKlienta="klient1">
+            <imie>Kamil</imie>
+            <nazwisko>Nowak</nazwisko>
+            <emai>kamil.nowak@temp.pl</emai>
+            <koszykId>koszyk1</koszykId>
+        </klient>
+        
+
+        <klient idKlienta="klient2">
+            <imie>Wojtek</imie>
+            <nazwisko>Nowak</nazwisko>
+            <emai>wojtek.nowak@temp.pl</emai>
+            <koszykId>koszyk2</koszykId>
+        </klient>
+
+        <klient idKlienta="klient3">
+            <imie>Magda</imie>
+            <nazwisko>Kowalska</nazwisko>
+            <emai>magda.kowalskak@temp.pl</emai>
+            <koszykId>koszyk3</koszykId>
+
+        </klient>
+    </klienci>
+
+    <koszyki>
+        <koszyk idKoszyka="koszyk1">
+            <produkt>k1</produkt>
+        </koszyk>
+        
+        <koszyk idKoszyka="koszyk2">
+            <produkt>k2</produkt>
+        </koszyk>
+        
+        <koszyk idKoszyka="koszyk3">
+            <produkt>k3</produkt>
+        </koszyk>
+    </koszyki>
+
+</ksiegarnia>
