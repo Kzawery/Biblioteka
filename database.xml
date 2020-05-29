@@ -41,17 +41,17 @@
             <skrot>tw</skrot>
             <nazwaTypu>twarda</nazwaTypu>
         </typOkladki>
-        <typksiazkaa typo="mk">
+        <typOkladki typo="mk">
             <skrot>mk</skrot>
             <nazwaTypu>miekka</nazwaTypu>
-        </typksiazkaa>
+        </typOkladki>
     </typyOkladek>
 
     <klienci>
         <klient idKlienta="klient1">
             <imie>Kamil</imie>
             <nazwisko>Nowak</nazwisko>
-            <emai>kamil.nowak@temp.pl</emai>
+            <email>kamil.nowak@temp.pl</email>
             <koszykId>koszyk1</koszykId>
         </klient>
         
@@ -59,14 +59,14 @@
         <klient idKlienta="klient2">
             <imie>Wojtek</imie>
             <nazwisko>Nowak</nazwisko>
-            <emai>wojtek.nowak@temp.pl</emai>
+            <email>wojtek.nowak@temp.pl</email>
             <koszykId>koszyk2</koszykId>
         </klient>
 
         <klient idKlienta="klient3">
             <imie>Magda</imie>
             <nazwisko>Kowalska</nazwisko>
-            <emai>magda.kowalskak@temp.pl</emai>
+            <email>magda.kowalskak@temp.pl</email>
             <koszykId>koszyk3</koszykId>
 
         </klient>
@@ -74,15 +74,21 @@
 
     <koszyki>
         <koszyk idKoszyka="koszyk1">
-            <produkt>k1</produkt>
+            <produkty>
+                <produkt>asda</produkt>
+            </produkty>
         </koszyk>
         
         <koszyk idKoszyka="koszyk2">
-            <produkt>k2</produkt>
+            <produkty>
+                <produkt>asda</produkt>
+            </produkty>
         </koszyk>
         
         <koszyk idKoszyka="koszyk3">
-            <produkt>k3</produkt>
+            <produkty>
+                <produkt>asda</produkt>
+            </produkty>
         </koszyk>
     </koszyki>
 
