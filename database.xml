@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ksiegarnia SYSTEM "database.dtd">
 <ksiegarnia>
     <ksiazki>
         <ksiazka id="k1" typo="mk">
@@ -52,7 +53,12 @@
             <imie>Kamil</imie>
             <nazwisko>Nowak</nazwisko>
             <email>kamil.nowak@temp.pl</email>
-            <koszykId>koszyk1</koszykId>
+            
+            <koszyk>
+                <produkt id="k1">1</produkt>
+                <produkt id="k2">2</produkt>
+            </koszyk>
+
         </klient>
         
 
@@ -60,36 +66,24 @@
             <imie>Wojtek</imie>
             <nazwisko>Nowak</nazwisko>
             <email>wojtek.nowak@temp.pl</email>
-            <koszykId>koszyk2</koszykId>
+            
+            <koszyk>
+                <produkt id="k1">1</produkt>
+                <produkt id="k2">2</produkt>
+                
+            </koszyk>
+
         </klient>
 
         <klient idKlienta="klient3">
             <imie>Magda</imie>
             <nazwisko>Kowalska</nazwisko>
             <email>magda.kowalskak@temp.pl</email>
-            <koszykId>koszyk3</koszykId>
-
+            <koszyk>
+                <produkt id="k1">1</produkt>
+                <produkt id="k2">2</produkt>
+            </koszyk>
         </klient>
     </klienci>
-
-    <koszyki>
-        <koszyk idKoszyka="koszyk1">
-            <produkty>
-                <produkt>asda</produkt>
-            </produkty>
-        </koszyk>
-        
-        <koszyk idKoszyka="koszyk2">
-            <produkty>
-                <produkt>asda</produkt>
-            </produkty>
-        </koszyk>
-        
-        <koszyk idKoszyka="koszyk3">
-            <produkty>
-                <produkt>asda</produkt>
-            </produkty>
-        </koszyk>
-    </koszyki>
 
 </ksiegarnia>

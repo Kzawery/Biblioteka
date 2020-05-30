@@ -1,0 +1,42 @@
+<!ELEMENT ksiegarnia (ksiazki, typyOkladek, klienci)>
+<!ELEMENT ksiazki (ksiazka+)>
+
+
+<!ELEMENT ksiazka (tytul, cena, autor, opis, ilosc)>
+
+<!ELEMENT tytul      (#PCDATA)>
+<!ELEMENT cena      (#PCDATA)>
+<!ELEMENT autor      (#PCDATA)>
+<!ELEMENT opis      (#PCDATA)>
+<!ELEMENT ilosc      (#PCDATA)>
+
+<!ELEMENT typyOkladek (typOkladki+)>
+
+<!ELEMENT typOkladki (skrot, nazwaTypu)>
+<!ELEMENT skrot     (#PCDATA)>
+<!ELEMENT nazwaTypu     (#PCDATA)>
+
+
+<!ELEMENT koszyk (produkt+)>
+
+<!ELEMENT produkt (#PCDATA)>
+<!ATTLIST produkt id IDREF #REQUIRED>
+<!ELEMENT klienci (klient+)>
+
+<!ELEMENT klient (imie, nazwisko, email, koszyk)>
+
+<!ELEMENT imie      (#PCDATA)>
+<!ELEMENT nazwisko       (#PCDATA)>
+<!ELEMENT email     (#PCDATA)>
+
+<!ATTLIST klient idKlienta ID #REQUIRED>
+
+<!ATTLIST ksiazka id ID #REQUIRED>
+
+<!ATTLIST ksiazka typo IDREF #REQUIRED>
+
+<!ATTLIST cena jednostkaCeny CDATA #REQUIRED>
+<!ATTLIST typyOkladek typOkladki (twarda|miekka) "miekka">
+<!ATTLIST typOkladki typo ID #REQUIRED>
+
+

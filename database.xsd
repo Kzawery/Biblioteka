@@ -89,19 +89,6 @@
     </xsd:simpleType>
   </xsd:attribute>
 
-  <xsd:simpleType name="koszykId">
-    <xsd:restriction base="xsd:string">
-      <xsd:pattern value="klient([0-9])+"/>
-    </xsd:restriction>
-  </xsd:simpleType>
-
-  <xsd:attribute name="idKoszyka">
-      <xsd:simpleType>
-        <xsd:restriction base="xsd:string">
-          <xsd:pattern value="koszyk([0-9])+"/>
-        </xsd:restriction>
-      </xsd:simpleType>
-  </xsd:attribute>
 
   <xsd:complexType name = "ksiazka">
     <xsd:sequence>
@@ -122,12 +109,6 @@
     </xsd:sequence>
   </xsd:complexType>
 
-  <xsd:complexType name="koszyki" >		
-    <xsd:sequence>
-      <xsd:element name="koszyk" type="koszyk" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
   <xsd:complexType name="typOkladki">
     <xsd:sequence>
       <xsd:element name="skrot" type="skrot"/>
@@ -142,12 +123,20 @@
     </xsd:sequence>
   </xsd:complexType>
 
+  <xsd:complexType name = "koszyk">
+    <xsd:sequence>
+      <xsd:element name="produkt" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute ref="id"/>
+  </xsd:complexType>
+    
+
   <xsd:complexType name = "klient">
     <xsd:sequence>
       <xsd:element name="imie" type="imie" maxOccurs="1"/>
       <xsd:element name="nazwisko" type="nazwisko" maxOccurs="1"/>
       <xsd:element name="email" type="email" maxOccurs="1"/>
-      <xsd:element name="koszykId" maxOccurs="1"/>
+      <xsd:element name="koszyk" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute ref="idKlienta" use="required"/>
   </xsd:complexType>
@@ -158,26 +147,12 @@
     </xsd:sequence>
   </xsd:complexType>
 
-  <xsd:complexType name = "produkty">
-    <xsd:sequence>
-      <xsd:element name="produkt" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-    
-
-    <xsd:complexType name="koszyk">
-      <xsd:sequence>
-        <xsd:element name="produkty" type="produkty" maxOccurs="1"/>
-      </xsd:sequence>
-      <xsd:attribute ref="idKoszyka" use="required"/>
-    </xsd:complexType>
-
+  
     <xsd:complexType name="ksiegarnia" >		
       <xsd:sequence>
         <xsd:element name="ksiazki" type="ksiazki" maxOccurs="1"/>
         <xsd:element name="typyOkladek" type="typyOkladek" maxOccurs="1"/>
         <xsd:element name="klienci" type="klienci" maxOccurs="1"/>
-        <xsd:element name="koszyki" type="koszyki" maxOccurs="1"/>
       </xsd:sequence>
     </xsd:complexType>
 
