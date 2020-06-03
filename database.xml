@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="database.css"?>
 <!DOCTYPE ksiegarnia SYSTEM "database.dtd">
 <ksiegarnia>
     <ksiazki>
@@ -34,7 +35,7 @@
             <opis>Przekręt" to już kolejna odsłona gorącej kryminalnej historii od tajemniczej Pauliny Świst. Zanurz się w świat, którym rządzą chciwość i pożądanie, a bohaterowie przekraczają kolejne granice. Jak daleko posuną się tym razem?</opis>
             <ilosc>24</ilosc>
         </ksiazka>
-
+    
     </ksiazki>
     
     <typyOkladek>
@@ -53,12 +54,6 @@
             <imie>Kamil</imie>
             <nazwisko>Nowak</nazwisko>
             <email>kamil.nowak@temp.pl</email>
-            
-            <koszyk>
-                <produkt id="k1">1</produkt>
-                <produkt id="k2">2</produkt>
-            </koszyk>
-
         </klient>
         
 
@@ -66,24 +61,34 @@
             <imie>Wojtek</imie>
             <nazwisko>Nowak</nazwisko>
             <email>wojtek.nowak@temp.pl</email>
-            
-            <koszyk>
-                <produkt id="k1">1</produkt>
-                <produkt id="k2">2</produkt>
-                
-            </koszyk>
-
         </klient>
 
         <klient idKlienta="klient3">
             <imie>Magda</imie>
             <nazwisko>Kowalska</nazwisko>
             <email>magda.kowalskak@temp.pl</email>
-            <koszyk>
-                <produkt id="k1">1</produkt>
-                <produkt id="k2">2</produkt>
-            </koszyk>
+            
         </klient>
     </klienci>
+
+    <koszyki>
+
+        <koszyk idKlienta = "klient1">
+                <produkt id="k1">1</produkt>
+                <produkt id="k2">2</produkt>
+        </koszyk>
+
+        <koszyk idKlienta = "klient2">
+                <produkt id="k1">1</produkt>
+                <produkt id="k2">2</produkt>
+                
+        </koszyk>
+
+        <koszyk idKlienta ="klient3">
+                <produkt id="k1">1</produkt>
+                <produkt id="k2">2</produkt>
+        </koszyk>
+
+    </koszyki>
 
 </ksiegarnia>

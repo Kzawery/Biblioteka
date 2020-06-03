@@ -1,0 +1,103 @@
+ksiegarnia:before {
+    display: block;
+    width: 8em;
+    font-weight: bold;
+    font-size: 200%;
+    content: "Ksiegarnia";
+    margin: -.75em 0px .25em -.25em;
+    margin-top: 10px;
+    padding: .1em .25em;
+    background-color: #cdf;
+    }
+    
+    ksiazki {
+    display: block;
+    margin: 2em 1em;
+    border: 4px solid #cdf;
+    padding: 0px 1em;
+    background-color: white;
+    }
+    
+    ksiazka {
+    display: block;
+    margin-bottom: 1em;
+    }
+    
+    tytul {
+    display: block;
+    font-weight: bold;
+    font-size: 150%;
+    }
+    
+    cena::before {
+        content: "Cena: ";
+        }
+    
+    
+    autor::before {
+        content: "Autor: ";
+        }
+
+
+    opis::before {
+        content: "Opis: ";
+        }
+    
+    ilosc::before {
+        content: "Ilość: ";
+        }
+
+    cena {
+    display: block;
+    }
+
+    
+    autor {
+    display: block;
+    }
+    
+    opis {
+    display: block;
+    }
+
+    ilosc {
+    display: block;
+    }
+    
+    typyOkladek {
+        display: block;
+        margin: 2em 1em;
+        border: 4px solid #cdf;
+        padding: 0px 1em;
+        background-color: white;
+        }
+    typOkladki{
+        display: block;
+    }
+    skrot::before{
+        content: "Skrót: ";
+    }
+    skrot{
+        display: block;
+        margin-bottom: 0.2em;
+    }
+    nazwaTypu{
+        display: block;
+        margin-bottom: 0.4em;
+    }
+    nazwaTypu::before{
+        content: "Rozwinięcie: ";
+    }
+
+    klienci {
+        display: block;
+        margin: 2em 1em;
+        border: 4px solid #cdf;
+        padding: 0px 1em;
+        background-color: white;
+        }
+    
+    klient {
+        display: block;
+        margin-bottom: 1em;
+        }

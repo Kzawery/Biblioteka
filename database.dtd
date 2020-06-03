@@ -1,4 +1,4 @@
-<!ELEMENT ksiegarnia (ksiazki, typyOkladek, klienci)>
+<!ELEMENT ksiegarnia (ksiazki, typyOkladek, klienci, koszyki)>
 <!ELEMENT ksiazki (ksiazka+)>
 
 
@@ -16,14 +16,16 @@
 <!ELEMENT skrot     (#PCDATA)>
 <!ELEMENT nazwaTypu     (#PCDATA)>
 
+<!ELEMENT koszyki (koszyk+)>
 
 <!ELEMENT koszyk (produkt+)>
 
 <!ELEMENT produkt (#PCDATA)>
 <!ATTLIST produkt id IDREF #REQUIRED>
+<!ATTLIST koszyk idKlienta IDREF #REQUIRED>
 <!ELEMENT klienci (klient+)>
 
-<!ELEMENT klient (imie, nazwisko, email, koszyk)>
+<!ELEMENT klient (imie, nazwisko, email)>
 
 <!ELEMENT imie      (#PCDATA)>
 <!ELEMENT nazwisko       (#PCDATA)>

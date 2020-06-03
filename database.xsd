@@ -127,7 +127,7 @@
     <xsd:sequence>
       <xsd:element name="produkt" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute ref="id"/>
+    <xsd:attribute ref="idKlienta"/>
   </xsd:complexType>
     
 
