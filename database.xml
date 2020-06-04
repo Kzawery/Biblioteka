@@ -36,6 +36,46 @@
             <ilosc>24</ilosc>
         </ksiazka>
     
+        <ksiazka id="k5" typo="mk">
+            <tytul>Papierowy Mag. Mag. Tom 1</tytul>
+            <cena jednostkaCeny="zł">20.99</cena>
+            <autor>Charlie N. Holmberg</autor>
+            <opis>Wciągające fantasy w steampunkowym wydaniu! Wkrocz do świata magów, w którym wszystko jest możliwe. Miej się jednak na baczności.</opis>
+            <ilosc>14</ilosc>
+        </ksiazka>
+
+        <ksiazka id="k6" typo="tw">
+            <tytul>Dom między chmurami. Tom 1</tytul>
+            <cena jednostkaCeny="zł">33.99</cena>
+            <autor>C. Klobuch</autor>
+            <opis>Miłość, poświęcenie i zdrada w pasjonującej opowieści fantasy, w której słowiańska mitologia miesza się z barbarzyńskimi kultami i wszechobecną magią.</opis>
+            <ilosc>11</ilosc>
+        </ksiazka>
+
+        <ksiazka id="k7" typo="tw">
+            <tytul>Kroniki braci. Tom 1. Upadek Lucyfera</tytul>
+            <cena jednostkaCeny="zł">32.99</cena>
+            <autor>Alec Wendy</autor>
+            <opis>"Upadek Lucyfera" to powieść fantastyczna, która ukazuje nam wizję Pierwszych Niebios i początek walki dobra ze złem, a także konsekwencje, które za tym idą.</opis>
+            <ilosc>51</ilosc>
+        </ksiazka>
+
+        <ksiazka id="k8" typo="mk">
+            <tytul>Kroniki braci. Tom 2. Pierwszy Sąd</tytul>
+            <cena jednostkaCeny="zł">35.99</cena>
+            <autor>Alec Wendy</autor>
+            <opis>Trzech archaniołów… Trzech braci… Jeden zdrajca.</opis>
+            <ilosc>21</ilosc>
+        </ksiazka>
+
+        <ksiazka id="k9" typo="mk">
+            <tytul>Becoming. Moja historia</tytul>
+            <cena jednostkaCeny="$">12.99</cena>
+            <autor>Michelle Obama</autor>
+            <opis>“Becoming. Moja historia” to autobiograficzna książka najsłynniejszej Pierwszej Damy USA.</opis>
+            <ilosc>21</ilosc>
+        </ksiazka>
+
     </ksiazki>
     
     <typyOkladek>
@@ -67,7 +107,42 @@
             <imie>Magda</imie>
             <nazwisko>Kowalska</nazwisko>
             <email>magda.kowalskak@temp.pl</email>
-            
+        </klient>
+
+        <klient idKlienta="klient4">
+            <imie>Kamil</imie>
+            <nazwisko>Kowalski</nazwisko>
+            <email>k.kowalski@temp.pl</email>
+        </klient>
+
+        <klient idKlienta="klient5">
+            <imie>Adam</imie>
+            <nazwisko>Adamowicz</nazwisko>
+            <email>a.adamowicz@temp.pl</email>
+        </klient>
+
+        <klient idKlienta="klient6">
+            <imie>Wioletta</imie>
+            <nazwisko>Grochowska</nazwisko>
+            <email>wgrochowska@temp.pl</email>
+        </klient>
+
+        <klient idKlienta="klient7">
+            <imie>Kamila</imie>
+            <nazwisko>Jankowsa</nazwisko>
+            <email>KamilaJankowska@temp.pl</email>
+        </klient>
+
+        <klient idKlienta="klient8">
+            <imie>Kuba</imie>
+            <nazwisko>Posochowicz</nazwisko>
+            <email>kubaPosochowicz@temp.pl</email>
+        </klient>
+
+        <klient idKlienta="klient9">
+            <imie>Wiesława</imie>
+            <nazwisko>Grzybowa</nazwisko>
+            <email>w.grzybowa@temp.pl</email>
         </klient>
     </klienci>
 
@@ -89,6 +164,41 @@
                 <produkt id="k2">2</produkt>
         </koszyk>
 
+        <koszyk idKlienta ="klient4">
+                <produkt id="k4">3</produkt>
+        </koszyk>
+
+        <koszyk idKlienta ="klient5">
+                <produkt id="k7">1</produkt>
+                <produkt id="k8">1</produkt>
+                <produkt id="k1">2</produkt>
+        </koszyk>
+
+        <koszyk idKlienta ="klient6">
+                <produkt id="k3">1</produkt>
+                <produkt id="k4">1</produkt>
+                <produkt id="k5">2</produkt>
+                <produkt id="k6">3</produkt>
+        </koszyk>
+
+        <koszyk idKlienta ="klient7">
+                <produkt id="k1">1</produkt>
+                <produkt id="k8">1</produkt>
+                <produkt id="k7">2</produkt>
+                <produkt id="k2">2</produkt>
+        </koszyk>
+
+        <koszyk idKlienta ="klient8">
+                <produkt id="k7">1</produkt>
+                <produkt id="k8">1</produkt>
+                <produkt id="k1">2</produkt>
+        </koszyk>
+
+        <koszyk idKlienta ="klient9">
+                <produkt id="k7">1</produkt>
+                <produkt id="k8">1</produkt>
+                <produkt id="k9">2</produkt>
+        </koszyk>
     </koszyki>
 
 </ksiegarnia>

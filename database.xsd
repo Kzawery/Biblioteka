@@ -1,172 +1,168 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <xsd:simpleType name="autor">
-      <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="opis">
-      <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="tytul">
-      <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  
-  <xsd:simpleType name="ilosc">
-      <xsd:restriction base="xsd:int"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="email">
-      <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="imie">
-      <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="nazwisko">
-      <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="produkt">
-      <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:attribute name="typo">
-    <xsd:simpleType>
-      <xsd:restriction base="xsd:string"/>
+    <xsd:simpleType name="autor">
+        <xsd:restriction base="xsd:string"/>
     </xsd:simpleType>
-  </xsd:attribute>
-  
-  <xsd:simpleType name="skrot">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="mk" />
-      <xsd:enumeration value="tw" />
-    </xsd:restriction>
-  </xsd:simpleType>
 
-  <xsd:simpleType name="nazwaTypu">
-    <xsd:restriction base="xsd:string">
-    </xsd:restriction>
-  </xsd:simpleType>
+    <xsd:simpleType name="opis">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
 
-  <xsd:simpleType name="cena-wartosc">
-    <xsd:restriction base="xsd:decimal">
-      <xsd:fractionDigits value="2"/>
-    </xsd:restriction>
-  </xsd:simpleType>
+    <xsd:simpleType name="tytul">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="ilosc">
+        <xsd:restriction base="xsd:int"/>
+    </xsd:simpleType>
 
-  <xsd:complexType name="cena">
-    <xsd:simpleContent>
-      <xsd:extension base="cena-wartosc">
-      <xsd:attribute ref="jednostkaCeny"/>
-      </xsd:extension>
-    </xsd:simpleContent>
+    <xsd:simpleType name="email">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="imie">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="nazwisko">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="produkt">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:attribute name="typo">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string"/>
+      </xsd:simpleType>
+    </xsd:attribute>
+    
+    <xsd:simpleType name="skrot">
+      <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="mk" />
+        <xsd:enumeration value="tw" />
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="nazwaTypu">
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="cena-wartosc">
+      <xsd:restriction base="xsd:decimal">
+        <xsd:fractionDigits value="2"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="cena">
+      <xsd:simpleContent>
+        <xsd:extension base="cena-wartosc">
+        <xsd:attribute ref="jednostkaCeny"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+      </xsd:complexType>
+
+    <xsd:attribute name="jednostkaCeny">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="zł" />
+          <xsd:enumeration value="$" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:attribute name="id">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="k([0-9])+"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:attribute name="idKlienta">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="klient([0-9])+"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+
+
+    <xsd:complexType name = "ksiazka">
+      <xsd:sequence>
+          <xsd:element name="tytul" type="tytul"/>
+          <xsd:element name="cena" type="cena"/>
+          <xsd:element name="autor" type="autor"/>
+          <xsd:element name="opis" type="opis"/>
+          <xsd:element name="ilosc" type="ilosc"/>   
+      </xsd:sequence>
+      <xsd:attribute ref="id" use="required"/>
+      <xsd:attribute ref="typo" use="required"/>
     </xsd:complexType>
 
-  <xsd:attribute name="jednostkaCeny">
-    <xsd:simpleType>
-      <xsd:restriction base="xsd:string">
-        <xsd:enumeration value="zł" />
-      </xsd:restriction>
-    </xsd:simpleType>
-  </xsd:attribute>
 
-  <xsd:attribute name="id">
-    <xsd:simpleType>
-      <xsd:restriction base="xsd:string">
-        <xsd:pattern value="k([0-9])+"/>
-      </xsd:restriction>
-    </xsd:simpleType>
-  </xsd:attribute>
-
-  <xsd:attribute name="idKlienta">
-    <xsd:simpleType>
-      <xsd:restriction base="xsd:string">
-        <xsd:pattern value="klient([0-9])+"/>
-      </xsd:restriction>
-    </xsd:simpleType>
-  </xsd:attribute>
-
-
-  <xsd:complexType name = "ksiazka">
-    <xsd:sequence>
-        <xsd:element name="tytul" type="tytul"/>
-        <xsd:element name="cena" type="cena"/>
-        <xsd:element name="autor" type="autor"/>
-        <xsd:element name="opis" type="opis"/>
-        <xsd:element name="ilosc" type="ilosc"/>   
-    </xsd:sequence>
-    <xsd:attribute ref="id" use="required"/>
-    <xsd:attribute ref="typo" use="required"/>
-  </xsd:complexType>
-
-
-  <xsd:complexType name="ksiazki" >		
-    <xsd:sequence>
-      <xsd:element name="ksiazka" type="ksiazka" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name="typOkladki">
-    <xsd:sequence>
-      <xsd:element name="skrot" type="skrot"/>
-      <xsd:element name="nazwaTypu" type="nazwaTypu"/>
-    </xsd:sequence>
-    <xsd:attribute ref="typo"/>
-  </xsd:complexType>
-
-  <xsd:complexType name="typyOkladek" >		
-    <xsd:sequence>
-      <xsd:element name="typOkladki" type="typOkladki" maxOccurs="2"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name = "koszyk">
-    <xsd:sequence>
-      <xsd:element name="produkt" maxOccurs="unbounded"/>
-    </xsd:sequence>
-    <xsd:attribute ref="idKlienta"/>
-  </xsd:complexType>
-    
-
-  <xsd:complexType name = "klient">
-    <xsd:sequence>
-      <xsd:element name="imie" type="imie" maxOccurs="1"/>
-      <xsd:element name="nazwisko" type="nazwisko" maxOccurs="1"/>
-      <xsd:element name="email" type="email" maxOccurs="1"/>
-      <xsd:element name="koszyk" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute ref="idKlienta" use="required"/>
-  </xsd:complexType>
-
-  <xsd:complexType name = "klienci">
-    <xsd:sequence>
-      <xsd:element name="klient" type="klient" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  
-    <xsd:complexType name="ksiegarnia" >		
+    <xsd:complexType name="ksiazki" >		
       <xsd:sequence>
-        <xsd:element name="ksiazki" type="ksiazki" maxOccurs="1"/>
-        <xsd:element name="typyOkladek" type="typyOkladek" maxOccurs="1"/>
-        <xsd:element name="klienci" type="klienci" maxOccurs="1"/>
+        <xsd:element name="ksiazka" type="ksiazka" maxOccurs="unbounded"/>
       </xsd:sequence>
     </xsd:complexType>
 
-    <xsd:element name="ksiegarnia" type="ksiegarnia">
+    <xsd:complexType name="typOkladki">
+      <xsd:sequence>
+        <xsd:element name="skrot" type="skrot"/>
+        <xsd:element name="nazwaTypu" type="nazwaTypu"/>
+      </xsd:sequence>
+      <xsd:attribute ref="typo"/>
+    </xsd:complexType>
 
-      <xsd:key name="idKlucz">  
-        <xsd:selector xpath=".//typyOkladek/typOkladki" />  
-        <xsd:field xpath="skrot" />  
-        </xsd:key>  
-        <xsd:keyref name="idRef" refer="idKlucz">  
-        <xsd:selector xpath=".//ksiazki/ksiazka" />  
-        <xsd:field xpath="@typ" />  
-        </xsd:keyref>  
-    </xsd:element>
+    <xsd:complexType name="typyOkladek" >		
+      <xsd:sequence>
+        <xsd:element name="typOkladki" type="typOkladki" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
 
-</xsd:schema>
+  <xsd:complexType name = "koszyk">
+      <xsd:sequence>
+        <xsd:element name="produkt" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute ref="idKlienta"/>
+    </xsd:complexType>
+
+  <xsd:complexType name="koszyki" >		
+      <xsd:sequence>
+        <xsd:element name="koszyk" type="koszyk" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name = "klient">
+      <xsd:sequence>
+        <xsd:element name="imie" type="imie" maxOccurs="1"/>
+        <xsd:element name="nazwisko" type="nazwisko" maxOccurs="1"/>
+        <xsd:element name="email" type="email" maxOccurs="1"/>
+      </xsd:sequence>
+      <xsd:attribute ref="idKlienta" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name = "klienci">
+      <xsd:sequence>
+        <xsd:element name="klient" type="klient" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    
+      <xsd:complexType name="ksiegarnia" >		
+        <xsd:sequence>
+          <xsd:element name="ksiazki" type="ksiazki" maxOccurs="1"/>
+          <xsd:element name="typyOkladek" type="typyOkladek" maxOccurs="1"/>
+          <xsd:element name="klienci" type="klienci" maxOccurs="1"/>
+          <xsd:element name="koszyki" type="koszyki" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:element name="ksiegarnia" type="ksiegarnia"></xsd:element>
+
+  </xsd:schema> 
 
